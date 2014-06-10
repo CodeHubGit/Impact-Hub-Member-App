@@ -4,11 +4,11 @@ angular.module('impactHubMemberAppApp')
   .controller('SettingsCtrl', function ($scope, User, Auth) {
     $scope.errors = {};
 
-    $scope.changePassword = function(form) {
+    $scope.update = function(form) {
       $scope.submitted = true;
 
       if(form.$valid) {
-        Auth.changePassword( $scope.user.oldPassword, $scope.user.newPassword )
+        Auth.update( $scope.user.oldPassword, $scope.user.newPassword )
         .then( function() {
           $scope.message = 'Password successfully changed.';
         })

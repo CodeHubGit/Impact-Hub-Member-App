@@ -76,7 +76,7 @@ angular.module('impactHubMemberAppApp')
        * @param  {Function} callback    - optional
        * @return {Promise}              
        */
-      changePassword: function(oldPassword, newPassword, callback) {
+      update: function(oldPassword, newPassword, callback) {
         var cb = callback || angular.noop;
 
         return User.update({
